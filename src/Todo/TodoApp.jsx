@@ -1,5 +1,4 @@
-import { TodoList } from './components';
-import { TodoAdd } from './components/TodoAdd';
+import { TodoList, TodoAdd } from './components';
 
 export const TodoApp = () => {
 
@@ -17,13 +16,11 @@ export const TodoApp = () => {
           <hr />
         </div>
         <div className="row">
-          <div className="col-7">            
+          <div className="col-sm-6 col-md-8">            
             <TodoList/>            
           </div>
-          <div className="col-5 text-center">
-            <h4>Agregar TODO</h4>
-            <hr />
-            <TodoAdd/>
+          <div className="col-sm-6 col-md-4 text-center">
+            <TodoAdd/>            
           </div>
         </div>
       </div>
