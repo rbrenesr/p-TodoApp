@@ -1,10 +1,18 @@
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { TodoItem } from "./TodoItem";
 
 export const TodoList = () => {
   const { todos } = useSelector((state) => state.todo);
+  // const  todos  = JSON.parse(localStorage.getItem('Todos')) || [];
 
   console.log(todos);
+
+  useEffect(() => {
+    localStorage.setItem("Todos", JSON.stringify(todos));
+  }, [todos]);
+
+
 
   return (
     <>

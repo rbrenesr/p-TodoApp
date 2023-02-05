@@ -45,6 +45,7 @@ export const TodoAdd = () => {
 
   useEffect(() => {
     localStorage.setItem("Todos", JSON.stringify(todos));
+    console.log('useeff');
   }, [todos]);
 
 

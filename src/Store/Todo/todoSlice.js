@@ -6,12 +6,15 @@ export const todoSlice = createSlice({
     initialState:{
         isSaving:false,
         messageSaved: '',
-        todos:[
-            {id:'A', todo:'hacer algo'},
-            {id:'B', todo:'hacer algo'},
-            {id:'C', todo:'hacer algo'},
+        todos:JSON.parse(localStorage.getItem('Todos')) || [],
+        // todos:[
+        //     {id:'A', todo:'hacer algo'},
+        //     {id:'B', todo:'hacer algo'},
+        //     {id:'C', todo:'hacer algo'},
           
-        ]
+        // ],
+       
+
     },
 
     reducers:{
