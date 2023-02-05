@@ -4,6 +4,8 @@ import { TodoItem } from "./TodoItem";
 export const TodoList = () => {
   const { todos } = useSelector((state) => state.todo);
 
+  console.log(todos);
+
   return (
     <>
 
