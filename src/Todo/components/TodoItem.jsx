@@ -1,12 +1,35 @@
+import { useDispatch } from "react-redux";
+import { deleteTodo, toggleTodo } from "../../Store/Todo/todoSlice";
+
 export const TodoItem = ({ todo }) => {
+  const dispatch = useDispatch();
+
+  const onDeleteTodo = () => {
+    dispatch(deleteTodo(todo));
+  };
+
+  const onToggleTodo = () => {
+    dispatch(toggleTodo(todo));
+  };
+
   return (
     <>
       <li
         key={todo.id}
         className="list-group-item d-flex justify-content-between"
+        onClick={onToggleTodo}
       >
-        {todo.todo}
-        <button className="btn btn-warning">
+        <span
+          className={`align-self-center ${
+            todo.done ? "text-decoration-line-through" : ""
+          }`}
+          aria-label="span"
+          // onClick={ (id)=> onToggleTodo(todo.id) }
+        >
+          {todo.todo}
+        </span>
+
+        <button className="btn btn-warning" onClick={onDeleteTodo}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"

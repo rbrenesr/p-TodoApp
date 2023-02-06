@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import Swal from 'sweetalert2';
-import { useForm } from '../../Hooks';
-import { starNewTodo } from '../../Store/Todo';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import Swal from "sweetalert2";
+import { useForm } from "../../Hooks";
+import { starNewTodo } from "../../Store/Todo";
 
 const formData = {
   id: "",
@@ -13,10 +13,7 @@ const formData = {
 export const TodoAdd = () => {
   const { todoDesc, onInputChange, onResetForm, formState } = useForm(formData);
   const { messageSaved, isSaving, todos } = useSelector((state) => state.todo);
- const dispatch = useDispatch();
-
-
-
+  const dispatch = useDispatch();
 
   const onAddTodo = (event) => {
     event.preventDefault();
@@ -41,15 +38,9 @@ export const TodoAdd = () => {
     Swal.fire("Nueva Tarea", "Tarea ingresado correctamente", "success");
   };
 
-
-
   useEffect(() => {
     localStorage.setItem("Todos", JSON.stringify(todos));
-    console.log('useeff');
   }, [todos]);
-
-
-
 
   return (
     <>

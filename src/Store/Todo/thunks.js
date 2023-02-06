@@ -2,11 +2,8 @@ import { addTodo } from "./";
 
 export const starNewTodo = (todo) => {
   return (dispatch, getState) => {
-
-    const tareas = getState().todo.todos;    
-
-    dispatch(addTodo(todo));   
-    
+    const tareas = getState().todo.todos;
+    dispatch(addTodo(todo));
   };
 };
 
