@@ -16,11 +16,11 @@ export const TodoItem = ({ todo }) => {
     <>
       <li
         key={todo.id}
-        className="list-group-item d-flex justify-content-between"
+        className="list-group-item d-flex justify-content-between opacity-75"
         onClick={onToggleTodo}
       >
         <span
-          className={`align-self-center h4 ${
+          className={`align-self-center h5 ${
             todo.done ? "text-decoration-line-through text-danger" : ""
           }`}
           aria-label="span"

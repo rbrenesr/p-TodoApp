@@ -50,12 +50,12 @@ export const TodoAdd = () => {
         <input
           type="text"
           placeholder="¿Qué hay que hacer?"
-          className="form-control mt-3 mt-md-0"
+          className="form-control mt-3 mt-md-0 opacity-50"
           name="todoDesc"
           value={todoDesc}
           onChange={onInputChange}
         />
-        <button className="btn btn-outline-primary col-12 mt-3" type="submit">
+        <button className="btn btn-secondary opacity-50 col-12 mt-3" type="submit">
           Agregar
         </button>
       </form>
