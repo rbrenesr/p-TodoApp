@@ -11,16 +11,17 @@ export const TodoList = () => {
 
   return (
     <>
-
-    <div className="overflow-auto" style={{height:300}}>
-    <ul className="list-group">
-        {todos.map((todo) => (
-          <TodoItem key={todo.id} todo={todo} />
-        ))}
-      </ul>
-    </div>
-
+      <div className="rounded-circle">
+      <div className="overflow-auto" style={{ height: 300 }}>
       
+        <ul className="list-group">
+          {todos.map((todo) => (
+            <TodoItem key={todo.id} todo={todo} />
+          ))}
+        </ul>
+      </div>
+      </div>
+     
     </>
   );
 };
