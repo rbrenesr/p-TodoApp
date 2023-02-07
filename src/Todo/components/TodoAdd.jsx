@@ -35,6 +35,8 @@ export const TodoAdd = () => {
     };
 
     dispatch(starNewTodo(newTodo));
+    onResetForm();
+
     Swal.fire("Nueva Tarea", "Tarea ingresado correctamente", "success");
   };
 

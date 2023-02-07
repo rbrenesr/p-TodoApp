@@ -7,6 +7,7 @@ export const todoSlice = createSlice({
     isSaving: false,
     messageSaved: "",
     todos: JSON.parse(localStorage.getItem("Todos")) || [],
+    errorMessage:'NO error'
     // todos:[
     //     {id:'A', todo:'hacer algo'},
     //     {id:'B', todo:'hacer algo'},
@@ -18,6 +19,7 @@ export const todoSlice = createSlice({
   reducers: {
     addTodo: (state, action) => {
       state.todos.push(action.payload);
+      console.log(action.payload);
     },
 
     deleteTodo: (state, action) => {
@@ -25,17 +27,16 @@ export const todoSlice = createSlice({
     },
 
     toggleTodo: (state, action) => {
-      state.todos = state.todos.map(todo => {
-
+      state.todos = state.todos.map((todo) => {
         if (todo.id === action.payload.id) {
-            return {
-                ...todo,
-                done: !todo.done
-            }
+          return {
+            ...todo,
+            done: !todo.done,
+          };
         }
 
         return todo;
-    })
+      });
     },
   },
 });

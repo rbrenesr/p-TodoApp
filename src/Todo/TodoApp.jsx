@@ -4,7 +4,7 @@ export const TodoApp = () => {
 
   return (
     <>
-      <div className="container-fluid" data-bs-theme="dark">
+      <div className="container-fluid animate__animated animate__fadeIn animate__delay-500ms" data-bs-theme="dark">
         <div className="row">
           <hr />
           <div className="col-12 col-sm-8 d-flex justify-content-start">
