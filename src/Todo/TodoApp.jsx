@@ -27,7 +27,7 @@ export const TodoApp = () => {
           <div className="col-12 col-sm-8 d-flex justify-content-start">
             <h1>Tareas por realizar</h1>
           </div>
-          <div className="col-12 col-sm-4 d-flex justify-content-end my-auto">
+          <div className="col-12 col-sm-4 d-flex justify-content-end my-auto mb-3">
             <a href="https://github.com/rbrenesr" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
